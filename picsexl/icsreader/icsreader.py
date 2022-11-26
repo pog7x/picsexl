@@ -5,7 +5,7 @@ import pytz
 from dateutil.rrule import rruleset, rrulestr
 from icalendar import Calendar
 
-from .exceptions import ICSReaderException
+from picsexl.icsreader.exceptions import ICSReaderException
 
 TZ_EUROPE_MOSCOW = "Europe/Moscow"
 

@@ -4,7 +4,7 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.formatting.rule import Rule
 from openpyxl.worksheet.worksheet import Worksheet
 
-from .exceptions import ExcelWriterException
+from picsexl.excelwriter.exceptions import ExcelWriterException
 
 
 class ExcelWriter:

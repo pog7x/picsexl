@@ -2,7 +2,7 @@ import os
 import typing
 from pathlib import Path
 
-from .exceptions import ICSSnifferException
+from picsexl.icssniffer.exceptions import ICSSnifferException
 
 
 class ICSSniffer:
