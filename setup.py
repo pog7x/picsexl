@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 with open("README.md", "r") as readme:
     long_description = readme.read()
@@ -8,7 +8,7 @@ with open("requirements.txt", "r") as requirements:
 
 setup(
     name="picsexl",
-    version="0.0.8",
+    version="0.0.9",
     author="pog7x",
     author_email="poluningm@gmail.com",
     url="https://github.com/pog7x/picsexl",
@@ -17,7 +17,7 @@ setup(
     description="Converter from ics format to xls",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=["picsexl"],
+    packages=find_packages(include=["picsexl", "picsexl.*"]),
     python_requires=">=3.7",
     install_requires=install_requires,
     classifiers=[
