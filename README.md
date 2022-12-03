@@ -16,7 +16,7 @@ pip install picsexl
 ### Example
 ```python
 from datetime import datetime, timezone
-from picsexl.picsexl import PIcsExl
+from picsexl import PIcsExl
 
 p = PIcsExl(
     file_path="/path/to/your/file.ics",
