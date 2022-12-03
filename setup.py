@@ -1,5 +1,7 @@
 from setuptools import find_packages, setup
 
+from picsexl import __version__
+
 with open("README.md", "r") as readme:
     long_description = readme.read()
 
@@ -8,7 +10,7 @@ with open("requirements.txt", "r") as requirements:
 
 setup(
     name="picsexl",
-    version="0.0.9",
+    version=".".join(str(v) for v in __version__),
     author="pog7x",
     author_email="poluningm@gmail.com",
     url="https://github.com/pog7x/picsexl",
