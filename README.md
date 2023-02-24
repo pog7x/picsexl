@@ -1,15 +1,13 @@
 # picsexl
 
-<p align="center">
-<a href="https://github.com/psf/black/blob/main/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
-<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
-</p>
+[![PyPI](https://img.shields.io/pypi/v/picsexl)](https://pypi.org/project/picsexl/)
+[![License](https://img.shields.io/github/license/pog7x/picsexl)](https://github.com/pog7x/picsexl/blob/master/LICENSE)
 
 ## Converter from ics format to xls
 
 ### Installation
-[PYPI](https://pypi.org/project/picsexl/)
-```shell script
+
+```bash
 pip install picsexl
 ```
 
