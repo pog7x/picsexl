@@ -7,17 +7,21 @@ from icalendar import Calendar
 
 from picsexl.icsreader.exceptions import ICSReaderException
 
-TZ_EUROPE_MOSCOW = "Europe/Moscow"
-
 
 class ICSReader:
     def __init__(
-        self, ics_string: str, mail_to: str, start_date: datetime, end_date: datetime
+        self,
+        ics_string: str,
+        mail_to: str,
+        start_date: datetime,
+        end_date: datetime,
+        to_timezone: str,
     ):
         self.__ics_string: str = ics_string
         self.__mail_to: str = mail_to
         self.__start_date: datetime = start_date
         self.__end_date: datetime = end_date
+        self.__to_timezone: str = to_timezone
         self.__events: typing.List = []
         self.__cal = filter(
             lambda c: c.name == "VEVENT", Calendar.from_ical(self.__ics_string).walk()
@@ -104,12 +108,12 @@ class ICSReader:
                 start_dt_ = (
                     start_dt
                     if all_day
-                    else start_dt.astimezone(pytz.timezone(TZ_EUROPE_MOSCOW))
+                    else start_dt.astimezone(pytz.timezone(self.__to_timezone))
                 )
                 end_dt_ = (
                     end_dt
                     if all_day
-                    else end_dt.astimezone(pytz.timezone(TZ_EUROPE_MOSCOW))
+                    else end_dt.astimezone(pytz.timezone(self.__to_timezone))
                 )
                 self.__append_event(
                     {

@@ -1,4 +1,4 @@
-__version__ = [0, 1, 1]
+__version__ = [0, 1, 4]
 
 from .excelwriter.constants import DECLINED_EVENT_RULE  # noqa:F401
 from .excelwriter.excelwriter import ExcelWriter  # noqa:F401

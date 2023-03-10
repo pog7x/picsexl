@@ -27,11 +27,13 @@ class PIcsExl:
         mail_to: str,
         start_date: datetime,
         end_date: datetime,
+        to_timezone: str,
     ):
         self.__file_path: str = file_path
         self.__mail_to: str = mail_to
         self.__start_date: datetime = start_date
         self.__end_date: datetime = end_date
+        self.__to_timezone: str = to_timezone
         self.__workbook_name: str = f"{self.__mail_to}-{datetime.isoformat(datetime.now())[:19].replace(':', '-')}"
         self.__ics_sniffer: ICSSniffer = ICSSniffer(
             file_path=self.__file_path,
@@ -45,6 +47,7 @@ class PIcsExl:
                 mail_to=self.__mail_to,
                 start_date=self.__start_date,
                 end_date=self.__end_date,
+                to_timezone=self.__to_timezone,
             )
 
             ics_list: typing.List = calendar_parser.get_events_from_ics()
